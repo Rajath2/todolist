@@ -131,7 +131,7 @@ class Todos extends React.Component{
                 <tbody >
                             <td width={100}>sr.no</td>
                             <td width={200} style={{textAlign:'center'}}>Date</td>
-                            <td width={130} style={{textAlign:'center'}}> Check box</td>
+                            <td width={120} style={{textAlign:'center'}}> Check box</td>
                             <td></td>
      
                 </tbody>
