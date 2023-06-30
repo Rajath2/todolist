@@ -130,8 +130,9 @@ class Todos extends React.Component{
             <table className="table" style={{border:'groove'}}>
                 <tbody >
                             <td width={100}>sr.no</td>
-                            <td style={{textAlign:'center'}}>Date</td>
-                            <td> Check box</td>
+                            <td width={200} style={{textAlign:'center'}}>Date</td>
+                            <td width={130} style={{textAlign:'center'}}> Check box</td>
+                            <td></td>
      
                 </tbody>
             </table>
@@ -143,15 +144,15 @@ class Todos extends React.Component{
                 <tbody>
                     {this.state.todosList.map((todo,index)=>(
                         <tr key={todo.id}>
-                            <td>{index+1}</td>
-                            <td>{this.state.date.toLocaleDateString()}</td>
-                            <td>
+                            <td width={100}>{index+1}</td>
+                            <td style={{textAlign:'center'}}>{this.state.date.toLocaleDateString()}</td>
+                            <td style={{textAlign:'center'}}>
                                 <input type="checkbox" width={1000}
                                 defaultChecked={todo.isDone}
                                 onClick={this.handelTodoDone(todo)}/>
                             </td>
-                            <td>{todo.value}</td>
-                            <td>
+                            <td style={{textAlign:'center'}}>{todo.value}</td>
+                            <td style={{textAlign:'center'}}>
                                 <button 
                                 className="btn btn-danger"
                                 onClick={()=> this.deleteTodo(todo)}>
